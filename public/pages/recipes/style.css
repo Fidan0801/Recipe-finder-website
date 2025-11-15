@@ -1,0 +1,170 @@
+.explore__content p {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.explore__content {
+  text-align: center;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.dropdowns {
+  position: relative;
+  display: flex;
+  gap: 15px;
+}
+
+.dropdown__button {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  font: inherit;
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.264);
+  border-radius: 8px;
+  font-size: clamp(12px, 1vw, 16px);
+}
+
+.dropdown__button img {
+  width: clamp(10px, 1vw, 14px);
+}
+
+.dropdown__list {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.264);
+  border-radius: 10px;
+  margin-top: 10px;
+  line-height: 2;
+  position: absolute;
+  width: clamp(130px, 25vw, 200px);
+  display: none;
+}
+
+.dropdowns div:focus-within .dropdown__list {
+  display: block;
+}
+
+.dropdowns div:focus-within .dropdown__button img {
+  rotate: 180deg;
+}
+
+input[type="radio"] {
+  accent-color: black;
+}
+
+input[type="search"] {
+  font: inherit;
+  width: clamp(205px, 20vw, 310px);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.264);
+  font-size: clamp(12px, 1vw, 16px);
+}
+
+
+.recipe__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe {
+  width: calc(100% / 3 - 10px);
+  background-color: white;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.327);
+}
+
+.recipe__cards:last-of-type {
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.recipes__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* .recipe {
+  width: 27vw;
+} */
+
+
+.recipe h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recipe__image img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.recipe button {
+  width: 100%;
+  color: white;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.details div {
+  display: flex;
+  gap: 10px;
+}
+
+.recipe p {
+  margin: 10px 0;
+}
+
+
+@media (max-width: 800px) {
+  .recipe__cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+  .recipe {
+    width: 100%;
+  }
+
+  .recipe__image img {
+    height: 70vh;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  .inputs {
+    flex-direction: column;
+  }
+
+  .dropdowns {
+    flex-direction: column;
+  }
+
+  .dropdown__button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dropdown__list {
+    width: 100%;
+  }
+
+  input[type="search"] {
+    width: 100%;
+  }
+}

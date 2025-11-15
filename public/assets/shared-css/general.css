@@ -1,0 +1,146 @@
+body {
+  background-color: rgb(246, 245, 241);
+  font-family: "Nunito", sans-serif;
+}
+
+section {
+  margin-top: 80px;
+}
+
+h1 {
+  font-size: clamp(40px, 4vw, 60px);
+  color: rgb(22, 58, 52);
+}
+
+h2 {
+  font-size: clamp(25px, 3.5vw, 40px);
+  color: rgb(22, 58, 52);
+}
+
+h3 {
+  color: rgb(22, 58, 52);
+  font-size: clamp(18px, 1.25vw, 20px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.container--fluid {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.navigation__bar {
+  margin: 20px auto;
+}
+
+.navbar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.hamburger__menu,
+.navbar__content--tablet {
+  display: none;
+}
+
+.navbar__list {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar__list a {
+  color: black;
+}
+
+.button a {
+  color: white;
+}
+
+.button {
+  background-color: rgb(22, 58, 52);
+  font: inherit;
+  width: 10vw;
+  padding: 10px 5px 10px 5px;
+  min-width: fit-content;
+  border-radius: 8px;
+}
+
+.footer {
+  margin: 50px auto;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__icons {
+  display: flex;
+  gap: 30px;
+}
+
+.logo {
+  width: clamp(200px, 15vw, 230px);
+}
+
+@media (max-width: 800px) {
+  .navbar__list,
+  .navbar__content .button {
+    display: none;
+  }
+
+  .hamburger__menu {
+    display: block;
+    border: none;
+    padding: 7px;
+    background-color: rgb(208, 220, 217);
+    border-radius: 5px;
+    width: clamp(25px, 4vw, 32px);
+  }
+
+  .navigation__bar:focus-within .navbar__content--tablet {
+    display: block;
+  }
+
+  .navbar__list--tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .navigation__bar {
+    position: relative;
+  }
+
+  .navbar__content--tablet {
+    background-color: white;
+    padding: 20px 10px 10px 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .button--tablet {
+    width: 100%;
+  }
+
+  .navbar__list--tablet a {
+    color: black;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer__content {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+}
