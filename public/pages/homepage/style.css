@@ -46,13 +46,14 @@
 
 .hero__image {
   margin-top: 40px;
+  display: flex;
 }
 
 .line {
   display: flex;
-  align-self: center;
+  align-self: flex-end;
   position: absolute;
-  top: 325px;
+  /* top: 325px; */
   z-index: -1;
 }
 
@@ -137,13 +138,13 @@
 }
 
 @media (max-width: 560px) {
-  .line {
+  /* .line {
     top: 400px;
-  }
+  } */
 }
 
-@media (max-width: 345px) {
+/* @media (max-width: 345px) {
   .line {
     display: none;
   }
-}
+} */
