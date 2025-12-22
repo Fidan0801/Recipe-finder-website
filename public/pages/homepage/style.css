@@ -52,6 +52,7 @@
 .line {
   display: flex;
   align-self: flex-end;
+  justify-self: center;
   position: absolute;
   /* top: 325px; */
   z-index: -1;
